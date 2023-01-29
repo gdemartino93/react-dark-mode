@@ -1,9 +1,17 @@
 import React from "react";
-
-const Articolo = () => {
+import data from './data';
+const Articolo = ({title,body}) => {
   return (
+    
     <article>
-      <h6>Articolo</h6>
+        <h4> </h4>
+      <div className="article-title">
+        <h4 className="fw-bold">{title}</h4>
+        <div className="underline"></div>
+         </div>
+         <div>
+        <p>{body}</p>
+        </div>
     </article>
   );
 };
