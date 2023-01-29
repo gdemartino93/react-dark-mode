@@ -1,17 +1,16 @@
 import React from "react";
-import data from './data';
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Articolo = ({title,body}) => {
   return (
     
-    <article>
-        <h4> </h4>
+    <article className="article col-lg-5 col-md-6 col-sm-6 col-12 shadow p-3 mb-5 bg-white rounded">
       <div className="article-title">
         <h4 className="fw-bold">{title}</h4>
         <div className="underline"></div>
-         </div>
-         <div>
+      </div>
+      <div>
         <p>{body}</p>
-        </div>
+      </div>
     </article>
   );
 };
