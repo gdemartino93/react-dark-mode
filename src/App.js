@@ -28,7 +28,7 @@ function App() {
   return (
     <section>
       <div className="container">
-        <h2 className="text-center">Mondo digitale</h2>
+        <h2 className="text-center p-4">Mondo digitale</h2>
         <button className="btn btn-outline-primary d-flex btn-theme" onClick={changeTheme}> 
           {isDark ? <BsFillSunFill /> : <BsFillMoonFill />}
         </button>
