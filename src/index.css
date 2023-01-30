@@ -17,6 +17,7 @@ h1 {
 }
 h2 {
   font-size: 2rem;
+  color: var(--clr-text);
 }
 h3 {
   font-size: 1.25rem;
@@ -50,16 +51,16 @@ p {
     line-height: 1;
   }
 }
-
-body{
-  background: red;
+#root{
+  background-color: var(--clr-bg);
 }
 .article{
-  background: lightgray;
+  background: var(--clr-bg);
   width: 100%;
   margin: 10px;
   text-align: center;
   height: fit-content;
+  color: var(--clr-text);
 }
 .article-title{
   position: relative;
@@ -74,7 +75,7 @@ body{
   bottom: -9px;
   height: 2px;
   width: 30%;
-  background-color: blue;
+  background-color: var(--clr-primary);
   left: 50%;
   transform: translateX(-50%);
 }
@@ -84,4 +85,17 @@ body{
   article {
     width: 100%;
   }
+}
+.light-mode {
+  --clr-bg: #efefef;
+  --clr-text: #222;
+  --clr-primary: rgb(56, 146, 194);
+  --clr-card: #eeeeee;
+}
+
+.dark-mode {
+  --clr-bg: #111;
+  --clr-text: #d4d3d3;
+  --clr-primary: #df372b;
+  --clr-card: #272724;
 }
