@@ -53,6 +53,7 @@ p {
 }
 #root{
   background-color: var(--clr-bg);
+  height: 100vh;
 }
 .article{
   background: var(--clr-bg);
