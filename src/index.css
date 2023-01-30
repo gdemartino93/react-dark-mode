@@ -99,3 +99,24 @@ p {
   --clr-primary: #df372b;
   --clr-card: #272724;
 }
+.btn-theme{
+  position: absolute;
+  left: -65px;
+  width: 100px;
+  justify-content: flex-end;
+}
+.btn-theme:hover{
+  animation: leave 1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes leave {
+  from {
+    left: -65px;
+    justify-content: flex-end;
+  }
+  to{
+    left: -5px;
+    justify-content: center;
+  }
+}
