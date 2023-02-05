@@ -2,14 +2,26 @@ import React, { useState, useEffect } from "react";
 import data from "./data";
 import {BsFillMoonFill, BsFillSunFill} from "react-icons/bs";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Articolo from "./Articolo";
+import Articolo from "./Articolo"; 
+
+
 
 function App() {
-  // usestate per gestire il cambio del tema 
-  const [theme , setTheme] = useState("light-mode");
+
+// se localstorage è settato ritorna il valore settato altrimenti ritorno comunque light mode
+  const getFromStorage = () =>{
+    if(localStorage.getItem('theme')){
+      return localStorage.getItem('theme');
+    }else{
+      return 'light-mode'
+    }
+  };
+  // usestate per gestire il cambio del tema in base al dato conservato nel local storage del browser
+  const [theme , setTheme] = useState(getFromStorage());
   // usestate per gestire il cambio del tasto
   const [isDark , setIsDark] = useState(false);
 
+  
   const changeTheme = () =>{
     if (theme === "light-mode"){
       setTheme("dark-mode")
@@ -19,8 +31,11 @@ function App() {
       setTheme("light-mode")
       setIsDark(false)
     }
-  }
+  };
+
   useEffect(()=>{
+    // conserva il valore del thema nel localstorage del browser
+    localStorage.setItem("theme",theme);
     // cambia la classe al tag html ogni volte che cambia il valore di theme
     document.documentElement.className = theme;
   },[theme])
